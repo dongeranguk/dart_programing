@@ -1,26 +1,12 @@
 void main() {
-  // 참 / 거짓형 bool
-  bool isTrue = true;
+  // 가변형 var / dynamic
+  var value = 1;
+  value = 2;
+  // value = 'value is string'; 최초 부여된 타입이 고정되므로 컴파일 에러 발생
+  print(value);
 
-  // 정수형 int
-  int num = 100;
-  //int num2 = 3.14 as int; as 는 뒤에 오는 형으로 변환시켜줄 수 있으나, 상위 타입으로만 변환 가능하다.
-  int num3 = 3.14.round();
-
-  // 실수형 double
-  double d_num1 = 3.14;
-  double d_num3 = 3.roundToDouble();
-
-  print(d_num3);
-
-  // 문자열형 String
-  String str = 'hello';
-  String str2 = "world";
-
-  print(str + ' ' + str2);
-
-  // Null형
-  Null isNull = null;
-  print(isNull);
-  print(isNull == null);
+  dynamic dynamicValue = 1;
+  print(dynamicValue);
+  dynamicValue = 'dynamicValue is String'; // 타입이 언제든 변환될 수 있다.
+  print(dynamicValue);
 }
